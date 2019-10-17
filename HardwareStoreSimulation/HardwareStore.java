@@ -2,7 +2,12 @@ package HardwareStoreSimulation;
 
 public class HardwareStore {
 
-    private ToolFactory factory;
+    ToolFactory factory = new ToolFactory;
+    public List<Tool> toolInventory;
 
-    public Tool woodtool1 = factory.createTool("woodwork tool",1,"woodTool1");
+    public Tool orderTool(String type,int id,String name){
+        Tool newTool = factory.createTool(type,id,name);
+        
+        return newTool;
+        
 }
